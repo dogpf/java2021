@@ -1,0 +1,24 @@
+class GCDCalculator:
+    @staticmethod
+    def gcd(m, n):
+        while n != 0:
+            m, n = n, m % n
+        return m
+
+print("功能1：計算最大公因數")
+while True:
+    m, n = map(int, input("請輸入兩個數 m 和 n（以空格分隔，輸入999結束）: ").split())
+    if m == 999:
+        break
+    
+    gcd = GCDCalculator.gcd(m, n)
+    print(f"{m} 和 {n} 的最大公因數為: {gcd}")
+
+print("\n功能2：輸入兩倍數並計算最大公因數")
+while True:
+    m, n = map(int, input("請輸入兩個數 m 和 n（以空格分隔，輸入999結束）: ").split())
+    if m == 999:
+        break
+    
+    gcd = GCDCalculator.gcd(m, n)
+    print(f"輸入: {m} {n}，此兩數的最大公因數為: {gcd}")
