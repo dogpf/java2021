@@ -1,0 +1,20 @@
+def get_grade(score):
+    if score >= 90:
+        return "A"
+    elif 90 > score >= 80:
+        return "B"
+    elif 80 > score >= 70:
+        return "C"
+    elif 70 > score >= 60:
+        return "D"
+    else:
+        return "F"
+
+for _ in range(5):
+    try:
+        score = int(input("Input: 請輸入一個整數: "))
+        grade = get_grade(score)
+        print(f"Your grade is {grade}")
+    except ValueError:
+        print("請輸入有效的整數")
+
