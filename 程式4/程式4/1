@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int[] array = new int[10];
+
+        System.out.println("請輸入10個整數：");
+        for (int i = 0; i < 10; i++) {
+            System.out.print("第" + (i + 1) + "個整數：");
+            array[i] = scanner.nextInt();
+        }
+
+        int countAbove60 = 0;
+        int sumAbove60 = 0;
+
+        for (int num : array) {
+            if (num > 60) {
+                countAbove60++;
+                sumAbove60 += num;
+            }
+        }
+
+        double averageAbove60 = countAbove60 > 0 ? (double) sumAbove60 / countAbove60 : 0;
+
+        System.out.println("大於60的整數個數：" + countAbove60);
+        System.out.println("大於60的整數總和：" + sumAbove60);
+        System.out.println("大於60的整數平均值：" + averageAbove60);
+
+        scanner.close();
+    }
+}
