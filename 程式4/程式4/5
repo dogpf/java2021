@@ -1,0 +1,37 @@
+public class ReverseArray {
+    public static void main(String[] args) {
+        String[] array = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J"};
+        
+        // 顯示反轉前的陣列
+        System.out.println("反轉陣列資料之前");
+        for (String element : array) {
+            System.out.print(element + " ");
+        }
+        System.out.println();
+        
+        // 反轉陣列
+        reverseArray(array);
+        
+        // 顯示反轉後的陣列
+        System.out.println("反轉陣列資料之後");
+        for (String element : array) {
+            System.out.print(element + " ");
+        }
+    }
+    
+    public static void reverseArray(String[] array) {
+        int start = 0;
+        int end = array.length - 1;
+        
+        while (start < end) {
+            // 交換元素
+            String temp = array[start];
+            array[start] = array[end];
+            array[end] = temp;
+            
+            // 移動指針
+            start++;
+            end--;
+        }
+    }
+}
