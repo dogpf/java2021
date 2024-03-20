@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class JPA03 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double totalCost = 0;
+        int mealCount = 0;
+
+        System.out.println("Please enter meal dollars or enter -1 to stop:");
+
+        double mealCost = scanner.nextDouble();
+        while (mealCost != -1) {
+            totalCost += mealCost;
+            mealCount++;
+
+            System.out.println("Please enter meal dollars or enter -1 to stop:");
+            mealCost = scanner.nextDouble();
+        }
+
+        scanner.close();
+
+        if (mealCount > 0) {
+            double averageCost = totalCost / mealCount;
+            System.out.println("餐點總費用: " + totalCost);
+            System.out.printf("道餐點平均费用為: %.2f", averageCost);
+        } else {
+            System.out.println("未输入任何餐點费用。");
+        }
+    }
+}
