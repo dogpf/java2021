@@ -1,1 +1,16 @@
+public class JPA03 {
+    public static void main(String[] args) {
+        int count = 0;
+
+        // 外层循环
+        for (int i = 0; i < 3; i++) {
+            // 内层循环
+            for (int j = 0; j < 2; j++) {
+                count++; // 每次内层循环执行，count加一
+            }
+        }
+
+        System.out.println("count : " + count);
+    }
+}
 
