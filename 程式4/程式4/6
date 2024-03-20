@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class ParkingFeeCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // 輸入停車時數
+        System.out.print("請輸入停車時數: ");
+        int hours = scanner.nextInt();
+        
+        // 計算停車費用並顯示
+        System.out.println("停車" + hours + "小時的費用為: " + calculateParkingFee(hours) + "元");
+        
+        scanner.close();
+    }
+    
+    public static int calculateParkingFee(int hours) {
+        int fee = 0;
+        
+        if (hours <= 2) {
+            fee = hours * 30;
+        } else if (hours <= 4) {
+            fee = 2 * 30 + (hours - 2) * 50;
+        } else if (hours <= 6) {
+            fee = 2 * 30 + 2 * 50 + (hours - 4) * 80;
+        } else {
+            fee = 2 * 30 + 2 * 50 + 2 * 80 + (hours - 6) * 100;
+        }
+        
+        return fee;
+    }
+}
