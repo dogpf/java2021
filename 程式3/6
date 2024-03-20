@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class JPA05 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        for (int i = 0; i < 3; i++) {
+            System.out.print("Please enter one value: ");
+            if (scanner.hasNextInt()) {
+                int n = scanner.nextInt();
+                if (n >= 1 && n <= 10) {
+                    System.out.println(n + "! : " + factorial(n));
+                } else {
+                    System.out.println("Error, the value is out of range.");
+                }
+            } else {
+                System.out.println("Error, invalid input.");
+                scanner.next(); // Consume invalid input
+            }
+        }
+        scanner.close();
+    }
+
+    // 计算阶乘
+    public static int factorial(int n) {
+        if (n == 0 || n == 1) {
+            return 1;
+        } else {
+            return n * factorial(n - 1);
+        }
+    }
+}
