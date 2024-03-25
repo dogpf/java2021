@@ -1,0 +1,10 @@
+for _ in range(4):
+    num = int(input("Enter an integer: "))
+    if num % 2 == 0:
+        print(f"{num} is a multiple of 2")
+    if num % 3 == 0:
+        print(f"{num} is a multiple of 3")
+    if num % 6 == 0:
+        print(f"{num} is a multiple of 6")
+    if num % 2 != 0 and num % 3 != 0 and num % 6 != 0:
+        print(f"{num} is not a multiple of 2, 3, or 6")
