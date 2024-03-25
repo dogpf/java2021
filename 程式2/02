@@ -1,0 +1,9 @@
+for _ in range(2):
+    nums = input("Input: ").split()
+    num1, num2 = map(int, nums)
+    if num1 > num2:
+        print(f"{num1} is larger than {num2}")
+    elif num1 < num2:
+        print(f"{num2} is larger than {num1}")
+    else:
+        print("The two numbers are equal")
