@@ -1,0 +1,6 @@
+for _ in range(2):
+    num = int(input("Input: "))
+    if num % 5 == 0 and num % 9 == 0:
+        print("Yes")
+    else:
+        print("No")
