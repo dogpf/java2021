@@ -1,0 +1,8 @@
+while True:
+    score = input("Please enter score: ")
+    if not score:
+        break
+    score = int(score)
+    if score >= 60:
+        print("You pass")
+    print("End")
