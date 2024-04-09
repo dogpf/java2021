@@ -1,0 +1,28 @@
+public class Factorial {
+
+    public static int fac(int n) {
+        if (n == 0) {
+            return 1;
+        } else {
+            return n * fac(n - 1);
+        }
+    }
+
+    public static void main(String[] args) {
+        // 輸入 n 的值
+        System.out.print("Input n (0 <= n <= 16): ");
+        int n = Integer.parseInt(System.console().readLine());
+
+        // 檢查 n 的值是否在 0 到 16 之間
+        if (n < 0 || n > 16) {
+            System.out.println("n 的值必須在 0 到 16 之間");
+            return;
+        }
+
+        // 計算 n 的階乘
+        int result = fac(n);
+
+        // 輸出結果
+        System.out.println(n + "的階乘 = " + result);
+    }
+}
