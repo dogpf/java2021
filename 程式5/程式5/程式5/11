@@ -1,0 +1,31 @@
+Java
+public class Factorial {
+
+    public static int fac(int n) {
+        """
+        計算 n 的階乘。
+
+        Args:
+            n: 要計算階乘的數值。
+
+        Returns:
+            n 的階乘。
+        """
+        if (n == 0) {
+            return 1;
+        } else {
+            return n * fac(n - 1);
+        }
+    }
+
+    public static void main(String[] args) {
+        while (true) {
+            int n = Integer.parseInt(System.console().readLine("Input n (0 <= n <= 16): "));
+            if (0 <= n && n <= 16) {
+                break;
+            }
+        }
+
+        System.out.println(n + "的階乘 = " + fac(n));
+    }
+}
