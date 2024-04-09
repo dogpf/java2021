@@ -1,0 +1,22 @@
+public class Factorial {
+
+    public static int fac(int n) {
+        int result = 1;
+        for (int i = 1; i <= n; i++) {
+            result *= i;
+        }
+        return result;
+    }
+
+    public static void main(String[] args) {
+        // 輸入 n 的值
+        System.out.print("Input n (0 <= n <= 16): ");
+        int n = Integer.parseInt(System.console().readLine());
+
+        // 計算 n 的階乘
+        int result = fac(n);
+
+        // 輸出結果
+        System.out.println(n + "的階乘 = " + result);
+    }
+}
